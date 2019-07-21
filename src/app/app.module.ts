@@ -44,7 +44,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     BrowserAnimationsModule,
   ],
- providers: [UserService, VideoService, CommentService],
+  providers: [UserService, VideoService, CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
