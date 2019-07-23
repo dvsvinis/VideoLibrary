@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Comment } from '../model/comment';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class CommentService {
@@ -9,7 +10,7 @@ export class CommentService {
   private commentsUrl: string;
 
   constructor(private http: HttpClient) {
-    this.commentsUrl = 'http://localhost:8080/comments';
+    this.commentsUrl = environment.serverURL + '/comments';
   }
 
   public findAll(): Observable<Comment[]> {
