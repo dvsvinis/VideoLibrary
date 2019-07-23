@@ -18,6 +18,12 @@ export class VideoService {
   }
 
   public save(video: Video) {
-    return this.http.post<Video>(this.videoUrl, video);
+    const formdata: FormData = new FormData();
+    formdata.append('file', video.file);
+    formdata.append('name', video.name);
+    formdata.append('description', video.description);
+    formdata.append('datecreated', video.datecreated);
+    formdata.append('filepath', video.filepath);
+    return this.http.post<Video>(this.videoUrl, formdata);
   }
 }
