@@ -20,16 +20,6 @@ import { NotFoundComponent } from './authentication/components/not-found/not-fou
 import { UnauthorizedComponent } from './authentication/components/unauthorized/unauthorized.component';
 import { HomeComponent } from './components/home/home.component';
 
-// import { UserListComponent } from './components/user-list/user-list.component';
-// import { UserFormComponent } from './components/user-form/user-form.component';
-// import { UserService } from './services/user-service.service';
-// import { LoginComponent } from './components/login/login.component';
-// import { LogoutComponent } from './components/logout/logout.component';
-// import { HeaderComponent } from './components/header/header.component';
-// import { UserComponent } from './components/user/user.component';
-// import { AddUserComponent } from './components/add-user/add-user.component';
-// import { FooterComponent } from './components/footer/footer.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,14 +36,7 @@ import { HomeComponent } from './components/home/home.component';
     AdminComponent,
     NotFoundComponent,
     UnauthorizedComponent
-    // UserListComponent,
-    // UserFormComponent,
-    // LogoutComponent,
-    // HeaderComponent,
-    // UserComponent,
-    // AddUserComponent,
-    // FooterComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,

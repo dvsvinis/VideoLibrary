@@ -14,14 +14,7 @@ import {NotFoundComponent} from './authentication/components/not-found/not-found
 import {UnauthorizedComponent} from './authentication/components/unauthorized/unauthorized.component';
 import {AuthGuard} from './authentication/guards/auth.guard';
 import {Role} from './authentication/models/role';
-
-// import { UserComponent } from './components/user/user.component';
-// import { UserListComponent } from './components/user-list/user-list.component';
-// import { UserFormComponent } from './components/user-form/user-form.component';
-// import { LoginComponent } from './components/login/login.component';
-// import { LogoutComponent } from './components/logout/logout.component';
-// import { AuthGoodService } from './services/auth-good.service';
-// import { AddUserComponent } from './components/add-user/add-user.component';
+import {User} from './authentication/models/user';
 
 const routes: Routes = [
   {path: '', redirectTo: 'videos', pathMatch: 'full'},
@@ -52,16 +45,6 @@ const routes: Routes = [
   { path: 'addcomments', component: CommentFormComponent },
   { path: 'home', component: HomeComponent }
 ];
-
-  // { path: '', component: UserComponent,canActivate:[AuthGoodService] },
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
-  // { path: 'adduser', component: UserFormComponent },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'logout', component: LogoutComponent },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'users', component: UserListComponent },
-  // { path: 'logout', component: LogoutComponent,canActivate:[AuthGoodService] },
-  // { path: 'adduser', component: AddUserComponent,canActivate:[AuthGoodService]},
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
