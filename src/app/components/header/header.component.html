@@ -4,14 +4,18 @@
 
     <ul class="navbar-nav">
 
+      <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/home" class="nav-link">Home</a></li>
+
       <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addcomments" class="nav-link">Add Comment</a></li>
       <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addvideo" class="nav-link">Add New Video</a></li>
+
+      <li class="list-inline-item"><a routerLink="/videos" class="nav-link">List Videos</a></li>
+      <li class="list-inline-item"><a routerLink="/comments" class="nav-link">List Comments</a></li>
+
+      <li><a *ngIf="!loginService.isUserLoggedIn()"routerLink="/adduser" class="nav-link">Add User</a></li>
       <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
       <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
 
-      <li class="list-inline-item"><a routerLink="/videos" class="btn btn-info">List Videos</a></li>
-      <li class="list-inline-item"><a routerLink="/comments" class="btn btn-info">List Comments</a></li>
-      <li class="list-inline-item"><a routerLink="/adduser" class="btn btn-info">Add User</a></li>
 
     </ul>
   </nav>
