@@ -1,23 +1,37 @@
-<app-header></app-header>
-<div class="container">
-  <div class="row">
-    <li></li>
-<!--    <div class="col-md-12">-->
-<!--      <div class="card bg-dark my-5">-->
-<!--        <div class="card-body">-->
-<!--          <h3 class="card-title text-center text-white py-3">{{ title }}</h3>-->
-<!--          <ul class="text-center list-inline py-3">-->
-<!--            <li class="list-inline-item"><a routerLink="/videos" class="btn btn-info">Video Play List</a></li>-->
-<!--            <li class="list-inline-item"><a routerLink="/comments" class="btn btn-info">Video Comments</a></li>-->
-<!--            <li class="list-inline-item"><a routerLink="/adduser" class="btn btn-info">Add User</a></li>-->
-<!--          </ul>-->
-<!--        </div>-->
-      </div>
-      <div> <router-outlet></router-outlet></div>
-    </div>
-<!--  </div>-->
-<!--  <div> <app-footer></app-footer></div>-->
-<!--</div>-->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a href="https://angular/io" class="navbar-brand">
+      <img src="assets/imgs/showboat.jpg" width="30" height="30" class="d-inline-block align-top"/>
+      <li class="list-inline-item"><a routerLink="/videos" class="nav-link">SHOWBOAT</a></li>
+    </a>
 
-<!--<h1>Environment</h1>-->
-<!--<pre>{{env | json}}</pre>-->
+      <div class="navbar-nav ml-auto" *ngIf="!currentUser">
+      <li class="nav-item">
+        <a href="/register" class="nav-link">
+          <span class="glyphicon glyphicon-user"></span> Sign Up
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="/login" class="nav-link">
+          <span class="glyphicon glyphicon-log-in"></span> Login
+        </a>
+      </li>
+    </div>
+
+    <div class="nav-link"><a *ngIf="isAdmin" routerLink="/admin" >Admin Page</a></div>
+    <div class="nav-link"><a *ngIf="currentUser" routerLink="/addvideo" >Add Video</a></div>
+    <div class="nav-link"><a *ngIf="currentUser" routerLink="/addcomments" >Add Comment</a></div>
+    <div class="navbar-nav ml-auto" *ngIf="currentUser">
+      <li class="nav-item">
+        <a href="/profile" class="nav-link">
+          <span class="glyphicon glyphicon-user"></span> {{currentUser.name}}
+        </a>
+      </li>
+      <li class="nav-item">
+        <a (click)="logOut()" class="nav-link">
+          <span class="glyphicon glyphicon-log-in"></span> LogOut
+        </a>
+      </li>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+

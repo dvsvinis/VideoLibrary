@@ -4,5 +4,6 @@ export class Video {
   filepath: string;
   datecreated: string;
   description: string;
-  file: File
+  file: File;
+
 }
