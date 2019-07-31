@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Comment } from '../../model/comment';
 
-import {CommentService} from "../../services/comment-service.service";
+import {CommentService} from '../../services/comment-service.service';
 
 @Component({
   selector: 'app-comment-list',

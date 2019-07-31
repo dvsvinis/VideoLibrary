@@ -36,13 +36,23 @@ const routes: Routes = [
   canActivate: [AuthGuard],
   data: {roles: [Role.ADMIN]}
   },
+  {path: 'addcomments',
+  component: CommentFormComponent,
+  canActivate: [AuthGuard],
+  data: {roles: [Role.USER, Role.ADMIN]}
+  },
+  // {path: 'addvideo',
+  // component: VideoListComponent,
+  // canActivate: [AuthGuard],
+  // data: {roles: [Role.USER, Role.ADMIN]}
+  // },
   // public error pages
   {path: '404', component: NotFoundComponent},
   {path: '401', component: UnauthorizedComponent},
   { path: 'videos', component: VideoListComponent },
-  { path: 'addvideo', component: VideoFormComponent },
   { path: 'comments', component: commentListComponent },
-  { path: 'addcomments', component: CommentFormComponent },
+  // { path: 'addcomments', component: CommentFormComponent },
+  { path: 'addvideo', component: VideoFormComponent },
   { path: 'home', component: HomeComponent }
 ];
 

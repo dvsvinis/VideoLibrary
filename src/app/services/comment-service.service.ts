@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Comment } from '../model/comment';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Injectable()
 export class CommentService {
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json',
+    })
+  };
 
   private commentsUrl: string;
 
@@ -18,7 +24,7 @@ export class CommentService {
   }
 
   public save(comments: Comment) {
-    return this.http.post<Comment>(this.commentsUrl, comments);
+    return this.http.post<Comment>(this.commentsUrl, comments, this.httpOptions);
   }
 }
 
