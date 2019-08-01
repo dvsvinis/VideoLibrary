@@ -1,9 +1,10 @@
 export class Video {
   id: number;
-  name: string;
+  title: string;
   filepath: string;
   datecreated: string;
   description: string;
+  userId: number;
   file: File;
 
 }

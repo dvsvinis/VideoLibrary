@@ -2,23 +2,21 @@
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #videoForm="ngForm">
       <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" [(ngModel)]="video.name"
+        <label for="name">Title</label>
+        <input type="text" [(ngModel)]="video.title"
                class="form-control" id="name" name="name" placeholder="Enter your name"
                required #name="ngModel">
       </div>
       <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
 
-      <label for="dateCreated">dateCreated</label>
-      <input type="text" [(ngModel)]="video.datecreated"
-             class="form-control" id="dateCreated" name="dateCreated" placeholder="Enter the date"
-             required #dateCreated="ngModel">
-      <div [hidden]="!dateCreated.pristine" class="alert alert-danger">dateCreated is required</div>
-
-      <label for="description">description</label>
-      <input type="text" [(ngModel)]="video.description"
-             class="form-control" id="description" name="description" placeholder="Enter the description"
-             required #description="ngModel">
+      <label for="description">Description</label>
+      <textarea type="text" [(ngModel)]="video.description"
+                class="form-control"
+                id="description" name="description"
+                rows="5"
+                placeholder="Enter the description"
+                required #description="ngModel">
+      </textarea>
       <div [hidden]="!description.pristine" class="alert alert-danger">description is required</div>
 
       <label for="description">Upload Video</label> <br>

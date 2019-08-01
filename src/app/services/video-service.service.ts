@@ -10,7 +10,7 @@ export class VideoService {
   private videoUrl: string;
 
   constructor(private http: HttpClient) {
-    this.videoUrl = environment.serverURL + '/video';
+    this.videoUrl = environment.serverURL + '/api/video';
   }
 
   public findAll(): Observable<Video[]> {
@@ -20,10 +20,8 @@ export class VideoService {
   public save(video: Video) {
     const formdata: FormData = new FormData();
     formdata.append('file', video.file);
-    formdata.append('name', video.name);
+    formdata.append('title', video.title);
     formdata.append('description', video.description);
-    formdata.append('datecreated', video.datecreated);
-    formdata.append('filepath', video.filepath);
     return this.http.post<Video>(this.videoUrl, formdata);
   }
 }

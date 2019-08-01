@@ -24,7 +24,7 @@ export class VideoFormComponent {
     this.router.navigate(['/video']);
   }
 
-  onFileChange(event){
+  onFileChange(event) {
     this.video.file = event.target.files.item(0);
     console.log(event);
   }
