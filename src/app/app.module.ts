@@ -19,6 +19,7 @@ import { AdminComponent } from './authentication/components/admin/admin.componen
 import { NotFoundComponent } from './authentication/components/not-found/not-found.component';
 import { UnauthorizedComponent } from './authentication/components/unauthorized/unauthorized.component';
 import { HomeComponent } from './components/home/home.component';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { HomeComponent } from './components/home/home.component';
     DetailComponent,
     AdminComponent,
     NotFoundComponent,
-    UnauthorizedComponent
+    UnauthorizedComponent,
+    VideoPlayerComponent
     ],
   imports: [
     BrowserModule,

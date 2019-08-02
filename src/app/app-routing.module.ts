@@ -15,11 +15,13 @@ import {UnauthorizedComponent} from './authentication/components/unauthorized/un
 import {AuthGuard} from './authentication/guards/auth.guard';
 import {Role} from './authentication/models/role';
 import {User} from './authentication/models/user';
+import {VideoPlayerComponent} from './video-player/video-player.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'videos', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
+  {path: 'videoplayer', component: VideoPlayerComponent},
   // user+admin
   {path: 'profile',
   component: ProfileComponent,
