@@ -8,10 +8,10 @@
 <div class="card my-5">
   <div class="card-body">
     <table class="table table-bordered table-striped">
-      <thead class="thead-dark">
+      <thead class="thead-light">
       <tr>
         <th scope="col">Id</th>
-        <th scope="col">Name</th>
+        <th scope="col">Title</th>
         <th scope="col">FilePath</th>
         <th scope="col">DateCreated</th>
         <th scope="col">Description</th>
@@ -20,7 +20,7 @@
       <tbody>
       <tr *ngFor="let video of videos">
         <td>{{ video.id }}</td>
-        <td>{{ video.name }}</td>
+        <td>{{ video.title }}</td>
         <td>{{ video.filepath }}</td>
         <td>{{ video.datecreated }}</td>
         <td>{{ video.description }}</td>
@@ -30,6 +30,12 @@
 
   </div>
 
+</div>
+<div class="grid-contianer">
+  <div class="grid-item" *ngFor="let video of videos">
+    <a href="#">{{ video.title }}</a>
+    <p>{{ video.description }}</p>
+  </div>
 </div>
 
 
