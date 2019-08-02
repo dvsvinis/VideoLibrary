@@ -43,6 +43,7 @@ const routes: Routes = [
   canActivate: [AuthGuard],
   data: {roles: [Role.USER, Role.ADMIN]}
   },
+  
   // {path: 'addvideo',
   // component: VideoListComponent,
   // canActivate: [AuthGuard],

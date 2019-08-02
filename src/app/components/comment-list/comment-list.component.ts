@@ -14,7 +14,7 @@ export class commentListComponent implements OnInit {
 
   constructor(private commentServices: CommentService) {
   }
-
+  
   ngOnInit() {
     this.commentServices.findAll().subscribe(data => {
       this.comments = data;
