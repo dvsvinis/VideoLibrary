@@ -33,8 +33,9 @@
 </div>
 <div class="grid-contianer">
   <div class="grid-item" *ngFor="let video of videos">
-    <a href="#">{{ video.title }}</a>
-    <p>{{ video.description }}</p>
+    <a routerLink="videoplayer:{{ video.id }}">{{ video.title }}</a>
+    <span></span>
+    <div>{{ video.description }}</div>
   </div>
 </div>
 
