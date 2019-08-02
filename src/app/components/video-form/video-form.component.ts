@@ -21,7 +21,7 @@ export class VideoFormComponent {
   }
 
   gotoVideoList() {
-    this.router.navigate(['/video']);
+    this.router.navigate(['/videos']);
   }
 
   onFileChange(event) {
