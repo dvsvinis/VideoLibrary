@@ -31,5 +31,11 @@
   </div>
 
 </div>
+<div class="grid-contianer">
+  <div class="grid-item" *ngFor="let video of videos">
+    <a href="#">{{ video.title }}</a>
+    <p>{{ video.description }}</p>
+  </div>
+</div>
 
 

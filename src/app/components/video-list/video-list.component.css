@@ -1,9 +1,24 @@
 .videoFrame{
     width:100%
-  }
+}
   
-  .videoFrame iframe{
+.videoFrame iframe{
      margin: 0 auto;
      display: block;
      width: 560px;
-  }
+}
+
+.grid-contianer {
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-gap: 10px;
+  grid-auto-rows: minmax ;
+  padding: 10px;
+}
+
+.grid-item{
+  border: 2px solid darkcyan;
+  padding:20px;
+  text-align: center;
+  /*margin: auto;*/
+}
