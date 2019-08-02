@@ -16,15 +16,15 @@ export class CommentService {
   private commentsUrl: string;
 
   constructor(private http: HttpClient) {
-    this.commentsUrl = environment.serverURL + '/comments';
+    this.commentsUrl = environment.serverURL + '/comments/';
   }
 
   public findAll(): Observable<Comment[]> {
     return this.http.get<Comment[]>(this.commentsUrl);
   }
 
-  public save(comments: Comment) {
-    return this.http.post<Comment>(this.commentsUrl, comments, this.httpOptions);
+  public save(comments: Comment, videoId: number) {
+    return this.http.post<Comment>(this.commentsUrl + videoId, comments, this.httpOptions);
   }
 }
 

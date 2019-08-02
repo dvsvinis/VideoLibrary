@@ -11,6 +11,7 @@ import {CommentService} from '../../services/comment-service.service';
 export class CommentFormComponent {
 
   comment: Comment;
+  videoId: number; 
 
   constructor(private route: ActivatedRoute, private router: Router, private commentService: CommentService) {
     this.comment = new Comment();
@@ -18,7 +19,7 @@ export class CommentFormComponent {
 
   onSubmit() {
     console.log( this.comment);
-    this.commentService.save(this.comment).subscribe(result => this.gotoCommentList());
+    this.commentService.save(this.comment,this.videoId).subscribe(result => this.gotoCommentList());
   }
 
   gotoCommentList() {
