@@ -10,7 +10,12 @@ export class VideoService {
   private videoUrl: string;
 
   constructor(private http: HttpClient) {
-    this.videoUrl = environment.serverURL + '/api/video';
+    this.videoUrl = environment.serverURL + '/api/video/';
+  }
+
+  public get(id: number): Observable<Video> {
+    return this.http.get<Video>(this.videoUrl + id);
+    console.log(this.videoUrl + id);
   }
 
   public findAll(): Observable<Video[]> {

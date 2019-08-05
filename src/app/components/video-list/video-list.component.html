@@ -1,39 +1,40 @@
 
-<section>
-    <div class="videoFrame">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/CUVmT6_okyI" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+<!--<section>-->
+<!--    <div class="videoFrame">-->
+<!--      <iframe width="560" height="315" src="https://www.youtube.com/embed/CUVmT6_okyI" frameborder="0" allowfullscreen></iframe>-->
+<!--    </div>-->
+<!--  </section>-->
 
-<div class="card my-5">
-  <div class="card-body">
-    <table class="table table-bordered table-striped">
-      <thead class="thead-light">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Title</th>
-        <th scope="col">FilePath</th>
-        <th scope="col">DateCreated</th>
-        <th scope="col">Description</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor="let video of videos">
-        <td>{{ video.id }}</td>
-        <td>{{ video.title }}</td>
-        <td>{{ video.filepath }}</td>
-        <td>{{ video.datecreated }}</td>
-        <td>{{ video.description }}</td>
-      </tr>
-      </tbody>
-    </table>
+<!--<div class="card my-5">-->
+<!--  <div class="card-body">-->
+<!--    <table class="table table-bordered table-striped">-->
+<!--      <thead class="thead-light">-->
+<!--      <tr>-->
+<!--        <th scope="col">Id</th>-->
+<!--        <th scope="col">Title</th>-->
+<!--        <th scope="col">FilePath</th>-->
+<!--        <th scope="col">DateCreated</th>-->
+<!--        <th scope="col">Description</th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      <tr *ngFor="let video of videos">-->
+<!--        <td>{{ video.id }}</td>-->
+<!--        <td>{{ video.title }}</td>-->
+<!--        <td>{{ video.filepath }}</td>-->
+<!--        <td>{{ video.datecreated }}</td>-->
+<!--        <td>{{ video.description }}</td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
 
-  </div>
+<!--  </div>-->
 
-</div>
+<!--</div>-->
+<h2 style="text-align: center; padding: 10px">VIDEO LIBRARY</h2>
 <div class="grid-contianer">
   <div class="grid-item" *ngFor="let video of videos">
-    <a routerLink="videoplayer:{{ video.id }}">{{ video.title }}</a>
+    <a routerLink="/videoplayer/{{ video.id }}">{{ video.title }}</a>
     <span></span>
     <div>{{ video.description }}</div>
   </div>
