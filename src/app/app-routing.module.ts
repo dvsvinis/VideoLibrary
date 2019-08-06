@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Router, Routes, RouterModule } from '@angular/router';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { VideoFormComponent } from './components/video-form/video-form.component';
-import { commentListComponent } from './components/comment-list/comment-list.component';
 import { CommentFormComponent } from './components/comment-form/comment-form.component';
 import { HomeComponent } from './components/home/home.component';
 import {LoginComponent} from './authentication/components/login/login.component';
@@ -16,6 +15,7 @@ import {AuthGuard} from './authentication/guards/auth.guard';
 import {Role} from './authentication/models/role';
 import {User} from './authentication/models/user';
 import {VideoPlayerComponent} from './video-player/video-player.component';
+import {CommentListComponent} from './components/comment-list/comment-list.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'videos', pathMatch: 'full'},
@@ -53,7 +53,7 @@ const routes: Routes = [
   {path: '404', component: NotFoundComponent},
   {path: '401', component: UnauthorizedComponent},
   { path: 'videos', component: VideoListComponent },
-  { path: 'comments', component: commentListComponent },
+  { path: 'comments', component: CommentListComponent },
   // { path: 'addcomments', component: CommentFormComponent },
   { path: 'addvideo', component: VideoFormComponent },
   { path: 'home', component: HomeComponent }
