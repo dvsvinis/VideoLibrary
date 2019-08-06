@@ -18,10 +18,22 @@
       {{ video.filepath }}
     </p>
   </div>
-
+  <div class="card my-5">
+      <div class="card-body">
+  <label for="description">Add a Comment!</label>
+      <textarea type="text" [(ngModel)]="video.comment"
+                class="form-control"
+                id="comment" name="comment"
+                rows="3"
+                placeholder="Enter the comment!"
+                required #description="ngModel">
+      </textarea>
+      <button type="submit" [disabled]="" class="btn btn-info">Submit</button>
   <div>
     <app-comment-list [comments]="video.comments"></app-comment-list>
   </div>
+
+
 
 </div>
 
