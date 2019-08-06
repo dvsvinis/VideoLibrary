@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { VideoFormComponent } from './components/video-form/video-form.component';
 import { VideoService } from './services/video-service.service';
-import { commentListComponent } from './components/comment-list/comment-list.component';
+import {CommentListComponent} from './components/comment-list/comment-list.component';
 import { CommentFormComponent } from './components/comment-form/comment-form.component';
 import { CommentService } from './services/comment-service.service';
 
@@ -27,7 +27,6 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     AppComponent,
     VideoFormComponent,
     VideoListComponent,
-    commentListComponent,
     CommentFormComponent,
     LoginComponent,
     HomeComponent,
@@ -38,8 +37,9 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     AdminComponent,
     NotFoundComponent,
     UnauthorizedComponent,
-    VideoPlayerComponent
-    ],
+    VideoPlayerComponent,
+    CommentListComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
