@@ -12,7 +12,8 @@
   display: grid;
   grid-template-columns: repeat(4, 300px);
   grid-gap: 10px;
-  grid-auto-rows: minmax ;
+  grid-template-rows: auto;
+  /*grid-auto-rows: minmax(50px, auto) ;*/
   padding: 10px;
 }
 

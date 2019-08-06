@@ -19,7 +19,7 @@ export class CommentFormComponent {
 
   onSubmit() {
     console.log( this.comment);
-    this.commentService.save(this.comment,this.videoId).subscribe(result => this.gotoCommentList());
+    this.commentService.save(this.comment, this.videoId).subscribe(result => this.gotoCommentList());
   }
 
   gotoCommentList() {
