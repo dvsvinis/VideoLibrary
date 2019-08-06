@@ -1,9 +1,43 @@
-<!--<h2>{{video.title}}</h2>-->
+<!--<div><h2>{{video.title}}</h2></div>-->
 
-<video id ="videoPlayer"  height="300" width="420" autoplay="autoplay" controls>
-<!--  development source-->
-<!--  <source src="{{video.filepath}}">-->
-<!--  test link-->
-  <source src="//showboatvideos.s3.us-east-2.amazonaws.com/video1faceSketch001.mp4">
-</video>
+<div *ngIf="video">
+
+  <div>
+    <video id ="videoPlayer"  height="300" width="420" autoplay="autoplay" controls>
+    <!--  development source-->
+      <source src="{{ video.filepath }}">
+    <!--  test link-->
+  <!--    <source src="//showboatvideos.s3.us-east-2.amazonaws.com/video1faceSketch001.mp4">-->
+
+    </video>
+  </div>
+  <div><h2>{{video.title}}</h2></div>
+  <div>
+    <p>
+      {{ video.description }}<br>
+      {{ video.filepath }}
+    </p>
+  </div>
+  <div class="card my-5">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmitComment()" #commentForm="ngForm">
+        <label for="description">Add a Comment!</label>
+      <textarea type="text" [(ngModel)]="comment.comment"
+                class="form-control"
+                id="comment" name="comment"
+                rows="3"
+                placeholder="Enter the comment!"
+                required #description="ngModel">
+      </textarea>
+      <button type="submit" [disabled]="" class="btn btn-info" >Submit Comment</button>
+      </form>
+      </div>
+  </div>
+  <div>
+    <app-comment-list [comments]="video.comments"></app-comment-list>
+  </div>
+
+
+
+</div>
 

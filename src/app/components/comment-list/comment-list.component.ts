@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Comment } from '../../model/comment';
 
 import {CommentService} from '../../services/comment-service.service';
@@ -8,16 +8,16 @@ import {CommentService} from '../../services/comment-service.service';
   templateUrl: './comment-list.component.html',
   styleUrls: ['./comment-list.component.css']
 })
-export class commentListComponent implements OnInit {
+export class CommentListComponent implements OnInit {
 
-  comments: Comment[];
+  @Input() comments: Comment[];
 
   constructor(private commentServices: CommentService) {
   }
   
   ngOnInit() {
-    this.commentServices.findAll().subscribe(data => {
-      this.comments = data;
-    });
+    // this.commentServices.findAll().subscribe(data => {
+    //   this.comments = data;
+    // });
   }
 }
