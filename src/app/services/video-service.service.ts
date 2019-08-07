@@ -14,8 +14,8 @@ export class VideoService {
   }
 
   public get(id: number): Observable<Video> {
-    return this.http.get<Video>(this.videoUrl + id);
     console.log(this.videoUrl + id);
+    return this.http.get<Video>(this.videoUrl + id);
   }
 
   public findAll(): Observable<Video[]> {

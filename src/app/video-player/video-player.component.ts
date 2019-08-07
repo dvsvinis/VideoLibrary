@@ -13,16 +13,16 @@ import {Comment} from '../model/comment'
 export class VideoPlayerComponent implements OnInit {
 
   @Input() video: Video;
-  comment: Comment; 
+  comment: Comment;
 
   constructor(private videoService: VideoService,
-              private route: ActivatedRoute, private commentService: CommentService) { 
+              private route: ActivatedRoute, private commentService: CommentService) {
                 this.comment = new Comment();
               }
 
   ngOnInit() {
     this.getVideo();
-    
+
   }
 
   getVideo() {
@@ -31,8 +31,8 @@ export class VideoPlayerComponent implements OnInit {
   }
 
   onSubmitComment() {
-    console.log("comment.comment");
-    this.commentService.save(this.comment,this.video.id).subscribe(result => this.commentService.findAll());
+    console.log(this.comment.comment);
+    this.commentService.save(this.comment, this.video.id).subscribe(result => this.commentService.findAll());
   }
 
 }
