@@ -12,6 +12,7 @@ g# Created by https://www.gitignore.io/api/intellij
 node_modules/*
 target/*
 *.yml
+.vscode/*
 src/main/resources/static/angularclient/node_modules/*
 
 # Generated files
