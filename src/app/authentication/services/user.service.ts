@@ -3,9 +3,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {BehaviorSubject, Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {User} from '../models/user';
+import {environment} from '../../../environments/environment';
 
 // tslint:disable-next-line: prefer-const
-let API_URL = 'http://localhost:8080/api/user/';
+let API_URL = environment.serverURL + '/api/user/';
 
 @Injectable({
   providedIn: 'root'

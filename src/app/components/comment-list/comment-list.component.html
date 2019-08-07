@@ -1,28 +1,28 @@
-<div class="card my-5">
-  <div class="card-body">
-    <table class="table table-bordered table-striped">
-      <thead class="thead-dark">
-      <tr>
-        <th scope="col">id</th>
-        <th scope="col">videoid</th>
-        <th scope="col">comment</th>
-      </tr>
-      </thead>
+<!--<div class="card my-5">-->
+<!--  <div class="card-body">-->
+<!--    <table class="table table-bordered table-striped">-->
+<!--      <thead class="thead-dark">-->
+<!--      <tr>-->
+<!--        <th scope="col">id</th>-->
+<!--        <th scope="col">videoid</th>-->
+<!--        <th scope="col">comment</th>-->
+<!--      </tr>-->
+<!--      </thead>-->
 
-      <tbody>
-      <tr *ngFor="let comment of comments">
-        <td>{{ comment.id }}</td>
-<!--        <td>{{ comment.videoid }}</td>-->
-        <td>{{ comment.comment }}</td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
+<!--      <tbody>-->
+<!--      <tr *ngFor="let comment of comments">-->
+<!--        <td>{{ comment.id }}</td>-->
+<!--&lt;!&ndash;        <td>{{ comment.videoid }}</td>&ndash;&gt;-->
+<!--        <td>{{ comment.comment }}</td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+<!--  </div>-->
+<!--</div>-->
 <div *ngFor="let comment of comments">
   <div class="card">
     <div class="card-body">
-      {{ comment.comment }}
+      <p style="text-align: left">{{ comment.comment }}</p>
     </div>
   </div>
 </div>
